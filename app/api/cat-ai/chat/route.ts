@@ -144,7 +144,7 @@ FORMAT YOUR RESPONSES USING MARKDOWN:
  
       } catch (error) {
         console.error(`Attempt ${attempt + 1} failed:`, error)
-        recordApiFailure(getActiveApi().name)
+        recordApiFailure()
         rotateToNextApi()
         lastError = error instanceof Error ? error.message : 'Unknown error'
       }
