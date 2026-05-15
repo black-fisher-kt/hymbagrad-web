@@ -105,7 +105,7 @@ FORMAT YOUR RESPONSES USING MARKDOWN:
         if (!response.ok) {
           const errData = await response.text()
           console.error(`API Error: ${response.status} - ${errData}`)
-          recordApiFailure(currentApi.name)
+          recordApiFailure()
           rotateToNextApi()
           lastError = `API ${currentApi.name} failed with status ${response.status}`
           continue
